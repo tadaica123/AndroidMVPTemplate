@@ -1,4 +1,4 @@
-package ${packageName}.ui${dotSubpackage};
+package ${pathContainComponent}.ui${dotSubpackage};
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,15 +14,15 @@ import android.view.ViewGroup;
 import ${superClassFqcn};
 
 <#if useAdapter>
-import ${packageName}.ui${dotSubpackage}.adapter.${adapterName};
+import ${pathContainComponent}.ui${dotSubpackage}.adapter.${adapterName};
 </#if >
 
 <#if packageName??>
 import ${packageName}.R;
 </#if>
 
-import ${packageName}.utils.ActivityUtils;
-import ${packageName}.utils.Injections;
+import ${pathContainComponent}.utils.ActivityUtils;
+import ${pathContainComponent}.utils.Injections;
 
 public class ${className} extends ${superClassName} implements ${contractName}.View
 <#if makeOnClickListener>
@@ -86,14 +86,14 @@ public class ${className} extends ${superClassName} implements ${contractName}.V
     protected void initData() {       
         //Set up Presenter's data        
 		<#if useAdapter>
-			mAdapter = new ${adapterName}(getApplicationContext());
+			mAdapter = new ${adapterName}(getBaseActivity());
 			<#if makeOnClickListener>
 			mAdapter.setClickListener(this);
 			</#if >
 		</#if >
     }
 	
-	@Override
+	
     public void onClick(View view) {
 
     }

@@ -6,13 +6,13 @@
         " />
 
     <global id="superClassFqcn" type="string" value="
-            <#if superClass == 'baseFragment'>${packageName}.ui.base.BaseFragment</#if>
+            <#if superClass == 'baseFragment'>${pathContainComponent}.ui.base.BaseFragment</#if>
         " />
 
     <global id="manifestOut" value="${manifestDir}" />
     <global id="useSupport" type="boolean" value="${(minApiLevel lt 11)?string}" />
     <global id="resOut" value="${resDir}" />
-    <global id="srcOut" value="${srcDir}/${slashedPackageName(packageName)}" />
+    <global id="srcOut" value="${srcDir}/${slashedPackageName(pathContainComponent)}" />
     <global id="relativePackage" value=".ui" />
     <global id="subpackage" value="<#if useSubPackage>${subPackage}/<#else></#if>" />
     <global id="dotSubpackage" value="<#if useSubPackage>.${subPackage}<#else></#if>" />

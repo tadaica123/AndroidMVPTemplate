@@ -1,8 +1,8 @@
-package ${packageName}.ui${dotSubpackage};
+package ${pathContainComponent}.ui${dotSubpackage};
 
 import android.support.annotation.NonNull;
-import ${packageName}.ui.base.MVPPresenter;
-import ${packageName}.ui.base.MVPView;
+import ${pathContainComponent}.ui.base.MVPPresenter;
+import ${pathContainComponent}.ui.base.MVPView;
 
 public interface ${contractName}{
 

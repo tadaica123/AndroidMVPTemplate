@@ -1,11 +1,11 @@
-package ${packageName}.ui${dotSubpackage}.adapter;
+package ${pathContainComponent}.ui${dotSubpackage}.adapter;
 
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import ${packageName}.data.DataManager;
-import ${packageName}.utils.RxSyncList;
-import ${packageName}.model${dotModelSubpackage}.${modelName};
+import ${pathContainComponent}.data.DataManager;
+import ${pathContainComponent}.utils.RxSyncList;
+import ${pathContainComponent}.model${dotModelSubpackage}.${modelName};
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.LayoutInflater;

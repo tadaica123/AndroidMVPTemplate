@@ -11,6 +11,14 @@
 
     <dependency name="android-support-v4" revision="8" />
 
+	<parameter
+        id="pathContainComponent"
+        name="Enter path contain component"
+        type="string"
+        constraints="nonempty|unique"
+        default="${packageName}"
+        help="Enter path contain component" />
+		
     <parameter
         id="className"
         name="Fragment Name"
@@ -152,7 +160,7 @@
         help="The name of the presenter interface to create" />
   
     <thumbs>
-        <thumb>template_fragment.png</thumb>
+        <thumb>template_moxy_activity.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl" />

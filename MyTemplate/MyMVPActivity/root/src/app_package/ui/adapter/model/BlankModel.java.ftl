@@ -1,4 +1,4 @@
-package ${packageName}.model${dotModelSubpackage};
+package ${pathContainComponent}.model${dotModelSubpackage};
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

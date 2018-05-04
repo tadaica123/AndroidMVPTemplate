@@ -1,4 +1,4 @@
-package ${packageName}.ui${dotSubpackage};
+package ${pathContainComponent}.ui${dotSubpackage};
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,11 +14,11 @@ import ${packageName}.R;
 </#if>
 
 <#if useAdapter>
-import ${packageName}.ui${dotSubpackage}.adapter.${adapterName};
+import ${pathContainComponent}.ui${dotSubpackage}.adapter.${adapterName};
 </#if >
 
-import ${packageName}.utils.ActivityUtils;
-import ${packageName}.utils.Injections;
+import ${pathContainComponent}.utils.ActivityUtils;
+import ${pathContainComponent}.utils.Injections;
 
 public class ${className} extends ${superClassName} implements ${contractName}.View 
 <#if makeOnClickListener>

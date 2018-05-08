@@ -25,8 +25,10 @@ import ${pathContainComponent}.utils.ActivityUtils;
 import ${pathContainComponent}.utils.Injections;
 
 public class ${className} extends ${superClassName} implements ${contractName}.View
+<#if useAdapter>
 <#if makeOnClickListener>
 , ${adapterName}.ClickListener
+</#if >
 </#if >
  {
     public static final String TAG = "${className}";
@@ -104,10 +106,12 @@ public class ${className} extends ${superClassName} implements ${contractName}.V
 		mPresenter.onDetach();
     }
 	
+	<#if useAdapter>
 	<#if makeOnClickListener>
 	@Override
     public void onItemClicked(View v, int position) {
 
     }
+	</#if >
 	</#if >
 }

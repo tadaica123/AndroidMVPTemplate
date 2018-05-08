@@ -26,6 +26,23 @@
         constraints="class|nonempty|unique"
         default="EnterNameFragment"
         help="The name of the fragment class to create" />
+			
+    <parameter
+        id="includeLayout"
+        name="Create layout XML?"
+        type="boolean"
+        default="true"
+        help="Generate a layout XML for the fragment" />
+		
+	<parameter
+        id="fragmentName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="fragment_blank"
+        visibility="includeLayout"
+        suggest="activity_${classToResource(className)}_layout"
+        help="The name of the layout to create" />
 
     <parameter
         id="useSubPackage"
@@ -61,7 +78,8 @@
         id="adapterLayoutName"
         name="Adapter layout name"
         type="string"
-        default="adapter_layout_blank"
+        default="adapter_blank"
+        suggest="adapter_${classToResource(adapterName)}_layout"
         visibility="useAdapter"
         help="Adapter layout name" />
 		
@@ -98,13 +116,6 @@
         help="Make an custom onClickListener" />
 
     <parameter
-        id="includeLayout"
-        name="Create layout XML?"
-        type="boolean"
-        default="true"
-        help="Generate a layout XML for the fragment" />
-
-    <parameter
         id="includeView"
         name="Create View?"
         type="boolean"
@@ -128,16 +139,6 @@
         <!--<option id="appCompat">MvpAppCompatActivity</option>
         <option id="activity">MvpActivity</option>-->
     </parameter>
-
-    <parameter
-        id="fragmentName"
-        name="Fragment Layout Name"
-        type="string"
-        constraints="layout|nonempty|unique"
-        default="fragment_blank"
-        visibility="includeLayout"
-        suggest="activity_${classToResource(className)}"
-        help="The name of the layout to create" />
 
 	<parameter
         id="contractName"

@@ -26,6 +26,16 @@
         constraints="class|nonempty|unique"
         default="EnterNameActivity"
         help="The name of the activity class to create" />
+	
+	<parameter
+        id="activityName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        default="activity_blank"
+        visibility="includeLayout"
+        suggest="activity_${classToResource(className)}_layout"
+        help="The name of the layout to create" />
 
     <parameter
         id="useSubPackage"
@@ -61,7 +71,8 @@
         id="adapterLayoutName"
         name="Adapter layout name"
         type="string"
-        default="adapter_layout_blank"
+        default="adapter_blank"
+        suggest="adapter_${classToResource(adapterName)}_layout"
         visibility="useAdapter"
         help="Adapter layout name" />
 		
@@ -128,16 +139,6 @@
         <!--<option id="appCompat">MvpAppCompatActivity</option>
         <option id="activity">MvpActivity</option>-->
     </parameter>
-
-    <parameter
-        id="activityName"
-        name="Activity Layout Name"
-        type="string"
-        constraints="layout|nonempty|unique"
-        default="activity_blank"
-        visibility="includeLayout"
-        suggest="activity_${classToResource(className)}"
-        help="The name of the layout to create" />
 
 	<parameter
         id="contractName"

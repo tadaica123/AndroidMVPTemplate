@@ -31,7 +31,7 @@ public class ${className} extends ${superClassName} implements ${contractName}.V
     public static final String TAG = "${className}";
  
  <#if includePresenter>
-	private ${contractName}.Presenter mPresenter  = new ${presenterName}();
+	private ${contractName}.Presenter mPresenter;
  </#if >
 
  <#if useAdapter>

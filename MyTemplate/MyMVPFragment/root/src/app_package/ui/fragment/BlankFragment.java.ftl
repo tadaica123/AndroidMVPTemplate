@@ -34,7 +34,7 @@ public class ${className} extends ${superClassName} implements ${contractName}.V
     public static final String TAG = "${className}";
  
  <#if includePresenter>
-	private ${contractName}.Presenter mPresenter  = new ${presenterName}();
+	private ${contractName}.Presenter mPresenter;
  </#if >
  <#if useAdapter>
 	private ${adapterName} mAdapter  = null;
@@ -114,4 +114,9 @@ public class ${className} extends ${superClassName} implements ${contractName}.V
     }
 	</#if >
 	</#if >
+	
+	@Override
+    public <T extends View> T findViewById(int id) {
+        return rootView.findViewById(id);
+    }
 }

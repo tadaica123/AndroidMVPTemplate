@@ -41,7 +41,7 @@
         constraints="layout|nonempty|unique"
         default="fragment_blank"
         visibility="includeLayout"
-        suggest="activity_${classToResource(className)}_layout"
+        suggest="fragment_${classToResource(className)}_layout"
         help="The name of the layout to create" />
 
     <parameter

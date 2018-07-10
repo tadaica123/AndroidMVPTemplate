@@ -36,6 +36,8 @@ public interface MVPPresenter<V extends MVPView> {
 
     void onViewInitialized();
 
+    void clearDisposableObserver();
+
     void handleApiError(@NonNull ANError error);
 
     void handleThrowable(Throwable throwable);

@@ -99,6 +99,11 @@ public class BasePresenter<V extends MVPView> implements MVPPresenter<V> {
     }
 
     @Override
+    public void clearDisposableObserver() {
+        mCompositeDisposable.clear();
+    }
+
+    @Override
     public void handleThrowable(Throwable throwable) {
         if (throwable instanceof ANError) {
             handleApiError((ANError) throwable);
@@ -109,7 +114,7 @@ public class BasePresenter<V extends MVPView> implements MVPPresenter<V> {
 
     @Override
     public void handleApiError(@NonNull ANError error) {
-        if ( error.getErrorBody() == null) {
+        if (error.getErrorBody() == null) {
             getMvpView().onConnectToServerError();
             return;
         }

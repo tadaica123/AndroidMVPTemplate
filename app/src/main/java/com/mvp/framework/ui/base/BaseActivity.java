@@ -1,6 +1,7 @@
 package com.mvp.framework.ui.base;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -17,6 +18,7 @@ import com.mvp.framework.R;
 import com.mvp.framework.ui.dialog.NotifyConnectionDialog;
 import com.mvp.framework.ui.dialog.NotifyDialog;
 import com.mvp.framework.utils.AlertType;
+import com.mvp.framework.utils.Injections;
 import com.mvp.framework.utils.MessageType;
 import com.mvp.framework.utils.StringUtils;
 import com.mvp.framework.utils.SystemUtils;
@@ -260,4 +262,5 @@ public abstract class BaseActivity extends AppCompatActivity
             notifyConnectionDialog.show();
         }
     }
+
 }

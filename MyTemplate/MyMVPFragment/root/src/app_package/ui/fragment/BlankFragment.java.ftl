@@ -72,9 +72,10 @@ public class ${className} extends ${superClassName} implements ${contractName}.V
         rootView = inflater.inflate(R.layout.${fragmentName}, container, false);
         mPresenter = new ${presenterName}(Injections.provideSchedulerProvider(),
                 Injections.provideAppDataManager(getBaseActivity()));
-        initView(rootView);
         mPresenter.onAttach(this);
+        initView(rootView);
         initData();
+        mPresenter.onViewInitialized();
         return rootView;
     }
 	</#if>

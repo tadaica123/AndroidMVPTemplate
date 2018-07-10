@@ -48,9 +48,9 @@ public class ${className} extends ${superClassName} implements ${contractName}.V
 		setContentView(R.layout.${activityName});
 		mPresenter = new ${presenterName}(Injections.provideSchedulerProvider(),
                 Injections.provideAppDataManager(${className}.this));
+        mPresenter.onAttach(this);
 		initView();
 		initData();
-        mPresenter.onAttach(this);
         mPresenter.onViewInitialized();
 	}
 	</#if>

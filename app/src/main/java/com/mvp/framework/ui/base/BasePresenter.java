@@ -27,10 +27,13 @@ import com.mvp.framework.model.APIResponse;
 import com.mvp.framework.utils.AppConstants;
 import com.mvp.framework.utils.SchedulerProvider;
 
+
 import javax.net.ssl.HttpsURLConnection;
 
+import io.reactivex.Observable;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 
 /**
  * Base class that implements the Presenter interface and provides a base implementation for
@@ -44,7 +47,9 @@ public class BasePresenter<V extends MVPView> implements MVPPresenter<V> {
     private SchedulerProvider mSchedulerProvider;
     private CompositeDisposable mCompositeDisposable;
     protected DataManager dataManager;
-
+    private Consumer<? super APIResponse> mLastOnNext;
+    private Consumer<? super Throwable> mLastOnError;
+    private Observable<APIResponse> mLastObservable;
     private V mMvpView;
 
     public BasePresenter(SchedulerProvider schedulerProvider, DataManager dataManager) {
@@ -72,6 +77,13 @@ public class BasePresenter<V extends MVPView> implements MVPPresenter<V> {
 
     public void addDisposableObserver(Disposable disposable) {
         mCompositeDisposable.add(disposable);
+    }
+
+    public void addObserver(Observable<APIResponse> observable,  Consumer<? super APIResponse> onNext, Consumer<? super Throwable> onError) {
+        mLastObservable = observable;
+        mLastOnNext = onNext;
+        mLastOnError = onError;
+        addDisposableObserver(observable.subscribe(onNext, onError));
     }
 
     public boolean isViewAttached() {

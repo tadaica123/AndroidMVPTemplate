@@ -3,8 +3,8 @@ package com.mvp.framework.utils;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.ColorRes;
+import androidx.annotation.ColorInt;
+import androidx.annotation.ColorRes;
 
 /**
  * Utils class for manipulating Bootstrap colors, and resolving colors from resource values.

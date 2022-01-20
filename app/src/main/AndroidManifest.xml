@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".IntroActivity">
+        <activity android:name=".IntroActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,9 +37,6 @@
                     android:scheme="default" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.shop.ShoppingCart" />
-        <activity android:name=".ui.blank.EnterNameActivity" />
-        <activity android:name=".ui.blank.b.EnterNameActivity" />
     </application>
 
 </manifest>

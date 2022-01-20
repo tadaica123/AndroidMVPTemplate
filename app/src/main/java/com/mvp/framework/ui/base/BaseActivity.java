@@ -1,14 +1,13 @@
 package com.mvp.framework.ui.base;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -18,7 +17,6 @@ import com.mvp.framework.R;
 import com.mvp.framework.ui.dialog.NotifyConnectionDialog;
 import com.mvp.framework.ui.dialog.NotifyDialog;
 import com.mvp.framework.utils.AlertType;
-import com.mvp.framework.utils.Injections;
 import com.mvp.framework.utils.MessageType;
 import com.mvp.framework.utils.StringUtils;
 import com.mvp.framework.utils.SystemUtils;

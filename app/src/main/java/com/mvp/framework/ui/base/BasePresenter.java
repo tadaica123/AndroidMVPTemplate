@@ -16,7 +16,7 @@
 package com.mvp.framework.ui.base;
 
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.text.TextUtils;
 
 import com.androidnetworking.common.ANConstants;

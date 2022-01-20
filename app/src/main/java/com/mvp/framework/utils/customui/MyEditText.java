@@ -2,7 +2,7 @@ package com.mvp.framework.utils.customui;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.v7.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatEditText;
 import android.util.AttributeSet;
 
 import com.mvp.framework.data.LanguageController;

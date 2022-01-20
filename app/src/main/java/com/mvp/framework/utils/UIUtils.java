@@ -6,7 +6,7 @@ package com.mvp.framework.utils;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.annotation.DrawableRes;
+import androidx.annotation.DrawableRes;
 import android.text.Html;
 import android.text.SpannableString;
 import android.text.Spanned;

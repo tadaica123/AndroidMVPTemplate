@@ -50,8 +50,6 @@
         <attr name="bootstrapProgress" format="integer"/>
         <attr name="bootstrapMaxProgress" format="integer"/>
         <attr name="roundedCorners" format="boolean"/>
-        <attr name="bootstrapBrand"/>
-        <attr name="bootstrapSize"/>
         <attr name="bootstrapDrawable" format="reference" />
     </declare-styleable>
 

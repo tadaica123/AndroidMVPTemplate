@@ -20,7 +20,7 @@ package com.mvp.framework.ui.base;
  */
 
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.androidnetworking.error.ANError;
 import com.mvp.framework.model.APIResponse;

@@ -19,7 +19,7 @@ package com.mvp.framework.ui.base;
  * Created by tuan.giao on 27/07/17.
  */
 
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 
 import com.mvp.framework.utils.AlertType;
 import com.mvp.framework.utils.MessageType;
